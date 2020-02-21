@@ -34,11 +34,17 @@ class MainActivity : AppCompatActivity() {
         val boxFourText = findViewById<TextView>(R.id.box_four_text)
         val boxFiveText = findViewById<TextView>(R.id.box_five_text)
 
+        val redButton = findViewById<TextView>(R.id.red_button)
+        val greenButton = findViewById<TextView>(R.id.green_button)
+        val yellowButton = findViewById<TextView>(R.id.yellow_button)
+
+
         val rootConstraintLayout = findViewById<View>(R.id.constraint_layout)
 
         val clickableViews: List<View> =
             listOf(boxOneText, boxTwoText, boxThreeText,
-                boxFourText, boxFiveText, rootConstraintLayout)
+                boxFourText, boxFiveText, rootConstraintLayout,
+                redButton, greenButton, yellowButton)
 
         for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
